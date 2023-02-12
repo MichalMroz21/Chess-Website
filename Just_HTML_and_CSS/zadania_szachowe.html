@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+
+    <meta charset="utf-8"/>
+    <meta name="description" content="Strona z informacjami o szachach. 
+    Naucz się grać lub ulepsz swoje umiejętności!"/>
+    <meta name="keywords" content="szachy, królowa, nauka, kurs, informacje"/>
+    <title>Strona o Szachach</title>
+    <meta name="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" type="text/css"/>
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" >
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="trybciemny.js" defer></script>
+    <script src="zadania_szachowe_skrypt.js" defer></script>
+
+    <noscript>
+        <style type="text/css">
+             #darktheme
+             {
+                display: none;
+             }
+             #darktheme1{
+                 display: none;
+             }
+             .sekcja{
+                 display: none;
+             }
+        </style>
+    </noscript>
+
+    </head>
+
+
+
+
+    <body id="0">
+
+        <header>
+            
+            <div id="nagłówek">
+                <img src="img/darktheme1.png" alt="darktheme" id="darktheme1"/>
+                <img src= "img/king.png" alt="król" id="krol" />
+                <div id="logo">Strona o Szachach</div>
+                <img src="img/darktheme1.png" alt="darktheme" id="darktheme"/>
+            </div>
+        
+        </header>
+
+        <nav>
+
+            <div id="nawigacja">
+
+                <ul>
+						 <li><a href="index.html">Strona Główna</a></li>
+                        
+                        <li id="rozwijane">
+                            Jak grać
+                            <ul>
+								<li><a href="ruchy.html">Ruchy</a></li>
+                                <li><a href="podstawy.html">Podstawy</a></li>
+                                <li><a href="otwarcia.html">Otwarcia</a></li>
+                            </ul>
+                        </li>
+                    
+                    <li><a href="gry_arcymistrzow.html">Gry Arcymistrzów</a></li>
+                    <li><a href="arcymistrzowie.html">Arcymistrzowie</a></li>
+                    <li><a href="zadania_szachowe.html">Zadania Szachowe</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <main>
+
+            <article>
+
+                <div id="pojemnik">
+
+                    <section>
+
+                        <div class = "sekcja">
+
+                            <div class="tekst" style="text-align: center">
+                                <div id="info"> <span id="infohover">Informacje</span> </div> 
+                                <div id="dialog"> </div>
+
+
+                                    <form onsubmit="submitForm(this)">
+
+                                        <p style="font-size: 24px;" id="najlepszewyniki">Najlepsze wyniki:</p>
+
+                                        <p>Wybierz tryb trudności</p>
+
+                                        <input type="radio" id="łatwe" name="tryb_trudności" value="Łatwe">
+                                        <label for="łatwe">Zadania łatwe</label><br>
+
+                                        <input type="radio" id="średnie" name="tryb_trudności" value="Średnie">
+                                        <label for="średnie">Zadania średnie</label><br>
+
+                                        <input type="radio" id="trudne" name="tryb_trudności" value="Trudne">
+                                        <label for="trudne">Zadania trudne</label><br><br>
+
+                                        <label for="nick">Ksywka (max 16 znaków):</label>
+                                        <input type="text" id="nick" name="nick"><br><br>
+
+                                        <label for="ilość">Ilość zadań (od 1 do 5):</label>
+                                        <input type="number" id="ilość" name="ilość_zadań" min="1" max="5"><br><br>
+
+                                        <label for="złe_odp">Maks. złych odpowiedzi:</label>
+                                            <select name="ilość_złych_odp" id="złe_odp">
+
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+
+                                            </select>
+                                        <br><br>
+
+                                        <label for="kolor">Kolor przycisku</label>
+                                        <input type="color" id="kolor" name="kolor_podświetlenia" value="#ffffff"><br><br>
+
+                                        <label for="obramowanie">Czarne obramowanie planszy</label>
+                                        <input type="checkbox" id="obramowanie" name="obramowanie" value="1"><br><br>
+                                        
+                                        <input type="submit" value="Zatwierdź"> <input type="reset">
+
+
+                                    </form>
+
+                                
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <div id="dolny_pasek"></div>
+
+                </div>
+
+            </article>
+
+        </main>
+
+        <footer>
+
+            <div id="stopka">
+
+                <a href="https://www.youtube.com/channel/UCbdcpQ5uPPymv7Ea0nnFfOw" target="_blank"><div id="yt">Youtube</div></a>
+                <a href="https://www.facebook.com/magnuschess/" target="_blank"><div id="fb">Facebook</div></a>
+                <a href="https://twitter.com/MagnusCarlsen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><div id="tw">Twitter</div></a>
+
+            </div>
+
+           <div id="prawa"><p>Strona o Szachach &copy; Wszelkie prawa zastrzeżone!</p></div> 
+
+        </footer>
+
+
+    </body>
+
+
+
+</html>

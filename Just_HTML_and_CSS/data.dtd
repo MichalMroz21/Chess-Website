@@ -1,0 +1,94 @@
+<!ENTITY % pc "#PCDATA">
+<!ENTITY % em "EMPTY">
+<!ENTITY f "female">
+
+<!ELEMENT data (grandmasters,pieces,grandmasters_games,engines,links)>
+
+<!ATTLIST data xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST data xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+
+<!ELEMENT grandmasters (grandmaster+)>
+<!ELEMENT pieces (piece+)>
+<!ELEMENT grandmasters_games (game+)>
+<!ELEMENT engines (engine+)>
+<!ELEMENT links (link+)>
+
+<!ATTLIST grandmasters quantity CDATA #REQUIRED>
+<!ATTLIST pieces quantity CDATA #REQUIRED>
+<!ATTLIST grandmasters_games quantity CDATA #REQUIRED>
+<!ATTLIST engines quantity CDATA #REQUIRED>
+<!ATTLIST links quantity CDATA #REQUIRED>
+
+<!ELEMENT grandmaster (name, surname, fide, image, birthday, place)>
+
+    <!ELEMENT name (%pc;)>
+    <!ELEMENT surname (%pc;)>
+    <!ELEMENT fide (#PCDATA)>
+    <!ELEMENT image %em;>
+    <!ELEMENT birthday (year,month,day)>
+
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT month (#PCDATA)>
+        <!ELEMENT day (#PCDATA)>
+
+    <!ELEMENT place (#PCDATA)>
+
+    <!ATTLIST grandmaster gender (male | female | other) "&f;">
+    <!ATTLIST grandmaster n CDATA #REQUIRED>
+    <!ATTLIST fide worldchampion (true | false) "false">
+    <!ATTLIST image source CDATA #REQUIRED>
+
+
+
+
+<!ELEMENT piece (name, value, startQuantity)>
+
+
+    <!ELEMENT value (math, relative)>
+
+        <!ELEMENT math (#PCDATA)>
+        <!ELEMENT relative (#PCDATA)>
+
+    <!ELEMENT startQuantity (#PCDATA)>
+
+
+    <!ATTLIST piece n CDATA #REQUIRED>
+
+
+
+<!ELEMENT game (player+, year, place, (winner|loser), moves, tournament)>
+
+    <!ELEMENT player (fullname)>
+
+        <!ELEMENT fullname (#PCDATA)>
+
+
+    <!ELEMENT winner (#PCDATA)>
+    <!ELEMENT loser (#PCDATA)>
+    <!ELEMENT moves (#PCDATA)>
+    <!ELEMENT tournament (#PCDATA)>
+
+
+    <!ATTLIST game n CDATA #REQUIRED>
+    <!ATTLIST game format (blitz | classical | rapid) "blitz">
+    <!ATTLIST player side (white | black) "white">
+
+
+<!ELEMENT engine (name, release, stable, license)>
+
+
+    <!ELEMENT release (date,version)>
+    <!ELEMENT stable (date,version)>
+
+        <!ELEMENT date (year,month,day)>
+        <!ELEMENT version (#PCDATA)>
+    
+    <!ELEMENT license (#PCDATA)>
+
+    <!ATTLIST engine lang CDATA "en">
+
+
+
+<!ELEMENT link (#PCDATA)>
+
+

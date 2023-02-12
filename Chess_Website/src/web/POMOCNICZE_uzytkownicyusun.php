@@ -1,0 +1,22 @@
+<?php
+
+use MongoDB\BSON\ObjectID;
+
+require '../../vendor/autoload.php';
+
+require_once 'business.php';
+
+$db = get_db();
+
+$dokumenty = $db -> uzytkownicy -> find();
+
+
+foreach($dokumenty as $dokument){
+
+    $id = $dokument['_id'];
+    $query = ['_id' => new ObjectId($id)];
+    $db->uzytkownicy->deleteOne($query);
+}
+
+
+?>

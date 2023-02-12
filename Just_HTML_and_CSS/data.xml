@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "data.dtd"> 
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="data.xsd">
+
+   <grandmasters quantity="5">
+
+        <grandmaster gender="male" n="1">
+
+            <name>Magnus</name>
+            <surname>Carlsen</surname>
+            <fide worldchampion="true">2855</fide>
+            <image source="magnus_carlsen.jpg"/>
+            <birthday>
+                <year>1990</year>
+                <month>November</month>
+                <day>30</day>
+            </birthday>
+            <place>Norway</place>
+            
+        </grandmaster>
+
+        <grandmaster gender="male" n="2">
+
+            <name>Hikaru</name>
+            <surname>Nakamura</surname>
+            <fide worldchampion="false">2736</fide>
+            <image source="hikaru_nakamura.jpg"/>
+            <birthday>
+                <year>1987</year>
+                <month>December</month>
+                <day>9</day>
+            </birthday>
+            <place>United States</place>
+            
+        </grandmaster>
+
+        <grandmaster gender="male" n="3">
+
+            <name>Jan-Krzysztof</name>
+            <surname>Duda</surname>
+            <fide worldchampion="false">2756</fide>
+            <image source="jan-krzysztof_duda.jpg"/>
+            <birthday>
+                <year>1998</year>
+                <month>April</month>
+                <day>26</day>
+            </birthday>
+            <place>Kraków</place>
+                
+        </grandmaster>
+
+        <grandmaster gender="male" n="4">
+
+            <name>Aleksander</name>
+            <surname>Grischuk</surname>
+            <fide worldchampion="false">2773</fide>
+            <image source="alexander_grischuk.jpeg"/>
+            <birthday>
+                <year>1983</year>
+                <month>October</month>
+                <day>31</day>
+            </birthday>
+            <place>Russia</place>
+                
+        </grandmaster>
+
+        <grandmaster gender="female" n="5">
+
+            <name>Hou</name>
+            <surname>Yifan</surname>
+            <fide worldchampion="false">2658</fide>
+            <image source="hou_yifan.jpg"/>
+            <birthday>
+                <year>1994</year>
+                <month>February</month>
+                <day>27</day>
+            </birthday>
+            <place>China</place>
+                
+        </grandmaster>
+   
+   </grandmasters>
+
+    <pieces quantity="6">
+
+        <piece n="1">
+
+            <name>Pawn</name>
+            <value>
+            
+            <math>1.0</math>
+            <relative>Higher when closer to the edge of the board</relative>
+
+            </value>
+            <startQuantity>16</startQuantity>
+    
+
+        </piece>
+
+        <piece n="2">
+
+            <name>Knight</name>
+            <value>
+            
+            <math>3.0</math>
+            <relative>Higher in closed positions</relative>
+
+            </value>
+            <startQuantity>4</startQuantity>
+    
+
+        </piece>
+
+        <piece n="3">
+
+            <name>Bishop</name>
+            <value>
+            
+            <math>3.5</math>
+            <relative>Higher in open positions</relative>
+
+            </value>
+            <startQuantity>4</startQuantity>
+    
+
+        </piece>
+
+        <piece n="4">
+
+            <name>Rook</name>
+            <value>
+            
+            <math>5.0</math>
+            <relative>Higher on open lines</relative>
+
+            </value>
+            <startQuantity>4</startQuantity>
+    
+
+        </piece>
+
+        <piece n="5">
+
+            <name>Queen</name>
+            <value>
+            
+            <math>9.0</math>
+            <relative>Higher in open positions and open lines</relative>
+
+            </value>
+            <startQuantity>2</startQuantity>
+    
+
+        </piece>
+
+        <piece n="6">
+
+            <name>King</name>
+            <value>
+            
+            <math>4.0</math>
+            <relative>Higher with less pieces on board</relative>
+
+            </value>
+            <startQuantity>2</startQuantity>
+    
+
+        </piece>
+
+    </pieces>
+
+
+
+
+
+    <grandmasters_games quantity="3">
+
+        <game n="1" format="blitz">
+
+            <player side="white">
+                <fullname>Magnus Carlsen</fullname>
+            </player>
+            
+            <player side="black">
+                <fullname>Ian Nepomniachtchi</fullname>
+            </player>
+
+            <year>2010</year>
+
+            <place>Russia</place>
+
+            <winner>Draw</winner>
+
+            <moves>126</moves>
+
+            <tournament>World Chess Championship</tournament>
+
+
+        </game>
+
+        <game n="2" format="rapid">
+
+            <player side="white">
+                <fullname>Magnus Carlsen</fullname>
+            </player>
+            
+            <player side="black">
+                <fullname>Jan-Krzysztof Duda</fullname>
+            </player>
+
+            <year>2021</year>
+
+            <place>United States</place>
+
+            <winner>Black</winner>
+
+            <moves>84</moves>
+
+            <tournament>Aimchess US Rapid</tournament>
+
+
+        </game>
+
+        <game n="3" format="rapid">
+
+            <player side="white">
+                <fullname>Anish Giri</fullname>
+            </player>
+            
+            <player side="black">
+                <fullname>Alireza Firouzja</fullname>
+            </player>
+
+        
+            <year>2021</year>
+
+            <place>Wijk aan Zee</place>
+
+            <loser>Draw</loser>
+
+            <moves>134</moves>
+
+            <tournament>Tata Steel Masters</tournament>
+
+
+        </game>
+
+    </grandmasters_games>
+
+
+    <engines quantity="3">
+
+        <engine lang="c++">
+
+            <name>Stockfish</name>
+
+            <release>
+
+                <date>
+
+                    <year>2008</year>
+                    <month>November</month>
+                    <day>2</day>
+
+                </date>
+
+                <version>1.0</version>
+
+            </release>
+
+            <stable>
+
+                <date>
+
+                    <year>2021</year>
+                    <month>October</month>
+                    <day>28</day>
+
+                </date>
+
+                <version>14.1</version>
+
+            </stable>
+
+            <license>GPLv3</license>
+
+        </engine>
+
+
+        <engine lang="c">
+
+            <name>Komodo</name>
+
+            <release>
+
+                <date>
+
+                    <year>2010</year>
+                    <month>January</month>
+                    <day>17</day>
+
+                </date>
+
+                <version>1.0</version>
+
+            </release>
+
+            <stable>
+
+                <date>
+
+                    <year>2021</year>
+                    <month>September</month>
+                    <day>24</day>
+
+                </date>
+
+                <version>2.5</version>
+
+            </stable>
+
+            <license>proprietary</license>
+
+        </engine>
+
+
+
+        <engine>
+
+            <name>Rybka</name>
+
+            <release>
+
+                <date>
+
+                    <year>2006</year>
+                    <month>July</month>
+                    <day>17</day>
+
+                </date>
+
+                <version>1.0</version>
+
+            </release>
+
+            <stable>
+
+                <date>
+
+                    <year>2010</year>
+                    <month>May</month>
+                    <day>4</day>
+
+                </date>
+
+                <version>4.0</version>
+
+            </stable>
+
+            <license>commercial</license>
+
+        </engine>
+
+
+    </engines>
+
+   <links quantity="3">
+
+        <link>https://www.youtube.com/channel/UCbdcpQ5uPPymv7Ea0nnFfOw</link>
+        <link>https://www.facebook.com/magnuschess/</link>
+        <link>https://twitter.com/MagnusCarlsen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor</link>
+
+    </links>
+
+
+
+</data>

@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="data">
+
+        <xs:complexType>
+
+            <xs:sequence>
+            
+
+
+
+
+                <xs:element name="grandmasters">
+
+                    <xs:complexType>
+
+                        <xs:sequence>
+
+                            <xs:element name="grandmaster" minOccurs="5" maxOccurs="5">
+
+                                <xs:complexType>
+
+                                    <xs:sequence>
+
+                                        <xs:element name="name">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                        <xs:element name="surname">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                        <xs:element name="fide">
+
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="rankValue">
+                                                        <xs:attribute name="worldchampion" type="xs:boolean"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+
+                                        </xs:element>
+
+                                        <xs:element name="image">
+                                            <xs:complexType>
+                                                 <xs:attribute name="source" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="birthday" type="birthdayType"/>
+
+                                        <xs:element name="place" type="placeType"/>
+
+                                    </xs:sequence>
+
+                                    <xs:attribute ref="gender" use="required"/>
+                                    <xs:attribute ref="n" use="required"/>
+
+                                </xs:complexType>
+
+                            </xs:element>
+
+                        </xs:sequence>
+
+                        <xs:attribute ref="quantity" use="required"/>
+
+                    </xs:complexType>
+
+                </xs:element>
+
+
+
+
+
+                <xs:element name="pieces" type="piecesType"/>
+
+
+
+
+                <xs:element name="grandmasters_games" type="grandmasters_gamesType"/>
+
+
+
+
+
+                <xs:element name="engines">
+
+                    <xs:complexType>
+
+                        <xs:sequence>
+
+                            <xs:element name="engine" minOccurs="3" maxOccurs="3">
+
+                                <xs:complexType>
+
+                                    <xs:sequence>
+
+                                        <xs:element name="name" type="name"/>
+
+                                        <xs:element name="release" type="stateType"/>
+                                        <xs:element name="stable" type="stateType"/>
+
+                                        <xs:element name="license" type="name"/>
+
+                                    </xs:sequence>
+
+                                    <xs:attribute name="lang" type="xs:string" use="optional"/>
+                                </xs:complexType>
+
+                            </xs:element>
+
+                        </xs:sequence>
+
+                        <xs:attribute ref="quantity" use="required"/>
+
+                    </xs:complexType>
+
+                </xs:element>
+
+
+                <xs:element name="links" type="linksType"/>
+
+
+
+
+
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+
+
+    
+
+    <xs:attribute name="quantity">
+        <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="10"/>
+                </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+
+    <xs:attribute name="gender">
+        <xs:simpleType>
+                <xs:restriction base="xs:string">
+                        <xs:enumeration value="female"/>
+                        <xs:enumeration value="male"/>
+                        <xs:enumeration value="other"/>
+                </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+
+    <xs:attribute name="format">
+        <xs:simpleType>
+                <xs:restriction base="xs:string">
+                        <xs:enumeration value="rapid"/>
+                        <xs:enumeration value="blitz"/>
+                        <xs:enumeration value="classical"/>
+                </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+
+    <xs:attribute name="n">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:pattern value="[1-9]"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+
+    <xs:simpleType name="rankValue">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[1-9]{1}[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="placeType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:group name="birthdayGroup">
+        <xs:sequence>
+            <xs:element name="year" type="xs:integer"/>
+            <xs:element name="month" type="xs:string"/>
+            <xs:element name="day" type="xs:integer"/>
+        </xs:sequence>
+    </xs:group>
+
+
+
+    <xs:complexType name="birthdayType">
+
+        <xs:group ref="birthdayGroup"/>
+
+    </xs:complexType>
+
+
+
+
+
+
+
+
+
+
+    <xs:complexType name="linksType">
+
+        <xs:sequence>
+
+        <xs:element name="link" type="linkType" minOccurs="3" maxOccurs="5"/>
+
+        </xs:sequence>
+
+        <xs:attribute ref="quantity" use="required"/> 
+
+    </xs:complexType>
+
+    
+
+
+
+    <xs:simpleType name="linkType">
+
+        <xs:restriction base="xs:string">
+
+            <xs:minLength value="1"/>
+            <xs:maxLength value="120"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+
+
+
+
+
+
+
+
+
+
+
+    <xs:complexType name="piecesType">
+
+        <xs:sequence>
+
+            <xs:element name="piece" type="pieceType" minOccurs="6" maxOccurs="6"/>
+
+        </xs:sequence>
+
+        <xs:attribute ref="quantity" use="required"/>
+
+    </xs:complexType>
+
+
+
+
+    <xs:complexType name="pieceType">
+
+        <xs:sequence>
+
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="value" type="valueType"/>
+            <xs:element name="startQuantity" type="startQuantityType"/>
+
+        </xs:sequence>
+
+        <xs:attribute ref="n" use="required"/>
+
+    </xs:complexType>
+
+    
+
+    <xs:complexType name="valueType">
+
+        <xs:sequence>
+
+            <xs:element name="math" type="mathType"/>
+            <xs:element name="relative" type="relativeType"/>
+
+        </xs:sequence>
+
+    </xs:complexType>
+
+
+
+    <xs:simpleType name="startQuantityType">
+
+        <xs:restriction base="xs:integer">
+
+            <xs:maxInclusive value="16"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+
+
+
+    <xs:simpleType name="mathType">
+        
+        <xs:restriction base="xs:decimal">
+
+            <xs:maxInclusive value="10.0"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+
+
+
+    <xs:simpleType name="relativeType">
+        
+        <xs:restriction base="xs:string">
+
+            <xs:minLength value="1"/>
+            <xs:maxLength value="50"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+
+
+
+
+
+
+
+
+
+
+    <xs:complexType name="grandmasters_gamesType">
+
+        <xs:sequence>
+
+            <xs:element name="game" type="gameType" minOccurs="3" maxOccurs="3"/>
+
+        </xs:sequence>
+
+
+        <xs:attribute ref="quantity" use="required"/>
+
+    </xs:complexType>
+
+
+    <xs:complexType name="gameType">
+
+
+
+        <xs:sequence>
+
+            <xs:element name="player" type="playerType" minOccurs="2" maxOccurs="2"/>
+
+            <xs:element name="year">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:maxInclusive value="9999"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:element name="place" type="placeType"/>
+
+            <xs:choice>
+                <xs:element name="winner" type="xs:string"/>
+                <xs:element name="loser" type="xs:string"/>
+            </xs:choice>
+
+            <xs:element name="moves" type="movesType"/>
+
+            <xs:element name="tournament" type="stringlist"/>
+
+        </xs:sequence>
+
+        <xs:attribute ref="n" use="required"/>
+        <xs:attribute ref="format" use="required"/>
+        
+    </xs:complexType>
+
+
+
+    <xs:simpleType name="movesType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="50"/>
+            <xs:maxInclusive value = "200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="stringlist">
+
+        <xs:restriction>
+
+            <xs:simpleType>
+                <xs:list itemType="listElement"/>
+            </xs:simpleType>
+
+            <xs:maxLength value="3"/>
+
+        </xs:restriction>
+
+    </xs:simpleType>
+
+    <xs:simpleType name="listElement">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="25"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="playerType">
+
+        <xs:sequence>
+
+            <xs:element name="fullname">
+                <xs:simpleType>
+                    <xs:union memberTypes="name surname"/>
+                </xs:simpleType>
+            </xs:element>
+
+        </xs:sequence>
+        
+        <xs:attribute name="side">
+
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="black"/>
+                    <xs:enumeration value="white"/>
+                </xs:restriction>
+            </xs:simpleType>
+
+        </xs:attribute>
+
+
+    </xs:complexType>
+
+
+    <xs:simpleType name="name">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+                                        
+
+    <xs:simpleType name="surname">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+                                       
+
+
+
+
+
+
+
+
+
+
+
+    <xs:complexType name="stateType">
+
+        <xs:sequence>
+
+            <xs:element name="date" type="birthdayType"/>
+
+            <xs:element name="version" type="xs:decimal"/>
+
+        </xs:sequence>
+
+    </xs:complexType>
+
+
+
+
+</xs:schema>

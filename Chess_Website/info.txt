@@ -1,0 +1,6 @@
+user: "admin"
+pwd: "p@ssw0rd"
+192.168.56.10:8080
+
+user: wai_web
+pwd: w@i_w3b

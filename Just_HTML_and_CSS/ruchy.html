@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+
+    <meta charset="utf-8"/>
+    <meta name="description" content="Strona z informacjami o szachach. 
+    Naucz się grać lub ulepsz swoje umiejętności!"/>
+    <meta name="keywords" content="szachy, królowa, nauka, kurs, informacje"/>
+    <title>Strona o Szachach</title>
+    <meta name="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" >
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="slajdy.js" defer></script>
+    <script src="trybciemny.js" defer></script>
+
+    <noscript>
+        <style type="text/css">
+             .divzkolami {
+               display: none; 
+             }
+    
+             #darktheme
+             {
+                display: none;
+             }
+             #darktheme1{
+                 display: none;
+             }
+        </style>
+    </noscript>
+    
+    </head>
+
+
+
+
+    <body id="1">
+
+        <header>
+            
+            <div id="nagłówek">
+                <img src="img/darktheme1.png" alt="darktheme" id="darktheme1"/>
+                <img src= "img/king.png" alt="król" id="krol" />
+                <div id="logo">Strona o Szachach</div>
+                <img src="img/darktheme1.png" alt="darktheme" id="darktheme"/>
+            </div>
+        
+        </header>
+
+        <nav>
+
+            <div id="nawigacja">
+
+                <ul>
+                    <li><a href="index.html">Strona Główna</a></li>
+                        
+                        <li id="rozwijane">
+                            Jak grać
+                            <ul>
+                                <li><a href="ruchy.html">Ruchy</a></li>
+                                <li><a href="podstawy.html">Podstawy</a></li>
+                                <li><a href="otwarcia.html">Otwarcia</a></li>
+                            </ul>
+                        </li>
+                    
+					<li><a href="gry_arcymistrzow.html">Gry Arcymistrzów</a></li>
+                    <li><a href="arcymistrzowie.html">Arcymistrzowie</a></li>
+                    <li><a href="zadania_szachowe.html">Zadania Szachowe</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <main>
+
+            <nav>
+
+                <div id="secondarynav">
+
+                    <a href="#pionek">Pionek</a> <a href="#skoczek">Skoczek</a> <a href="#goniec">Goniec</a> <a href="#wieza">Wieża</a> <a href="#hetman">Hetman</a> <a href="#kroltekst">Król</a>
+
+                </div>
+
+            </nav>
+
+            
+
+            <article>
+
+                <div id="pojemnik" style="margin-top: 0px;">
+
+                    <section>
+
+                        <div class = "sekcja">
+
+                            <div class="obraz"> 
+                                <img src="img-ruchy/pionek1.png" alt="pionek"/> 
+                                <svg class="divzkolami">  
+                                    <circle r="20" cx="40%" cy="50%" fill="red" stroke="black" class="czerwony"> </circle> 
+                                    <circle r="20" cx="60%" cy="50%" fill="green" stroke="black" class="zielony"> </circle> 
+                                </svg> 
+                            </div>
+                            <div class="tekst"> <p class="tekstspecjalny" id="pionek">Pionek</p>
+                                Pionek porusza się 1 pole do przodu. Nie może poruszać sie do tyłu. Pion z pozycji wyjściowej może również wykonać ruch o dwa pola do przodu.
+                                Pion bije na ukos, jedno pole do przodu po lewej lub prawej jego stronie. Niezwykłym ruchem jest bicie w przelocie. 
+                                Możliwość bicia w przelocie powstaje tylko wówczas, gdy pion jednej ze stron wykonał ruch o dwa pola, a pole, które minął, 
+                                jest atakowane przez piona strony przeciwnej. 
+                                Pion bijący w przelocie zajmuje to właśnie wolne pole, które minął pion zbijany.
+                            </div>
+
+                        </div>
+
+                    </section>
+					
+					<section>
+
+                        <div class = "sekcjaR">
+
+                            <div class="obraz"> 
+                                <img src="img-ruchy/skoczek1.png" alt="skoczek"/> 
+                                <svg class="divzkolami">  
+                                    <circle r="20" cx="40%" cy="50%" fill="red" stroke="black" class="czerwony"> </circle> 
+                                    <circle r="20" cx="60%" cy="50%" fill="green" stroke="black" class="zielony"> </circle> 
+                                </svg> 
+                            </div>
+                            <div class="tekst">  <p class="tekstspecjalny" id="skoczek">Skoczek</p>
+                                Ruch skoczka można opisać jako krok o jedno pole w pionie lub poziomie, a następnie drugi krok na ukos, w kierunku oddalającym go od pola startowego. 
+                                Niekiedy mówi się, że porusza się on „po literze L”. 
+                                Przemieszcza się zawsze na pole przeciwnego koloru, pole to jest dodatkowo najbliższym polem o przeciwnym do wyjściowego kolorze, 
+                                z wyłączeniem z nim sąsiadujących. 
+                                Skoczek, tak jak każda inna figura, bije bierkę przeciwnika zajmując jej pole i porusza się przy biciu według tejże reguły, co i przy zwykłym ruchu.
+                                Skoczek jest niezwykły w porównaniu z innymi bierkami szachowymi. 
+                                W przeciwieństwie do innych figur szachowych skoczek może zignorować bierki stojące mu na drodze i przeskakiwać przez nie. 
+                                Poza tym jest jedyną figurą, która może rozpocząć partię (inną bierką o tej możliwości jest pion).
+                            </div>
+
+                        </div>
+
+                    </section>
+					
+					<section>
+
+                        <div class = "sekcja">
+
+                            <div class="obraz"> 
+                                <img src="img-ruchy/wieza1.png" alt="wieza"/> 
+                                <svg class="divzkolami">  
+                                    <circle r="20" cx="40%" cy="50%" fill="red" stroke="black" class="czerwony"> </circle> 
+                                    <circle r="20" cx="60%" cy="50%" fill="green" stroke="black" class="zielony"> </circle> 
+                                </svg> 
+                            </div>
+                            <div class="tekst"> <p class="tekstspecjalny" id="wieza">Wieża</p>
+                                Wieża porusza się po liniach pionowych i poziomych, w dowolnym kierunku, o dowolną liczbę niezajętych pól.
+                                 Wieża nie może przeskakiwać nad innymi bierkami. 
+                                Wieża bije bierkę przeciwnika, zajmując jej pole. Uczestniczy również wraz z królem w specyficznym ruchu, zwanym roszadą.
+                            </div>
+
+                        </div>
+
+                    </section>
+					
+					<section>
+
+                        <div class = "sekcjaR">
+
+                            <div class="obraz"> 
+                                <img src="img-ruchy/goniec1.png" alt="goniec"/> 
+                                <svg class="divzkolami">  
+                                    <circle r="20" cx="40%" cy="50%" fill="red" stroke="black" class="czerwony"> </circle> 
+                                    <circle r="20" cx="60%" cy="50%" fill="green" stroke="black" class="zielony"> </circle> 
+                                </svg> 
+                            </div>
+                            <div class="tekst"> <p class="tekstspecjalny" id="goniec">Goniec</p>
+                                Goniec porusza się wyłącznie po przekątnych pól, w dowolnym kierunku, o dowolną liczbę niezajętych pól. 
+                                Gońce nie mogą przeskakiwać nad innymi bierkami. Goniec bije bierkę przeciwnika, zajmując jej pole.
+                            </div>
+
+                        </div>
+
+                    </section>
+					
+					<section>
+
+                        <div class = "sekcja">
+
+                            <div class="obraz"> 
+                                <img src="img-ruchy/hetman1.png" alt="hetman"/> 
+                                <svg class="divzkolami">  
+                                    <circle r="20" cx="40%" cy="50%" fill="red" stroke="black" class="czerwony"> </circle> 
+                                    <circle r="20" cx="60%" cy="50%" fill="green" stroke="black" class="zielony"> </circle> 
+                                </svg> 
+                            </div>
+                            <div class="tekst"> <p class="tekstspecjalny" id="hetman">Hetman = Wieża + Goniec</p>
+                                Hetman może poruszać się w dowolnym kierunku (poziomo, pionowo oraz na ukos) o dowolną liczbę wolnych pól, jest więc jakby jednocześnie i gońcem i wieżą. 
+                                Hetman nie może przeskakiwać nad innymi bierkami. Hetman bije bierkę przeciwnika, zajmując jej pole.
+                            </div>
+
+                        </div>
+
+                    </section>
+					
+					<section>
+
+                        <div class = "sekcjaR">
+
+                            <div class="obraz"> 
+                                <img src="img-ruchy/krol1.png" alt="krol"/> 
+                                <svg class="divzkolami">  
+                                    <circle r="20" cx="40%" cy="50%" fill="red" stroke="black" class="czerwony"> </circle> 
+                                    <circle r="20" cx="60%" cy="50%" fill="green" stroke="black" class="zielony"> </circle> 
+                                </svg> 
+                            </div>
+                            <div class="tekst"> <p class="tekstspecjalny" id="kroltekst">Król</p>
+                                Król może poruszać się o jedno pole w dowolnym kierunku (pionowo, poziomo lub na ukos), nie może jednak wejść na pole atakowane przez bierkę przeciwnika. 
+                                Jak wszystkie inne bierki, król bije bierkę przeciwnika wchodząc na pole przez nią zajmowane (z zastrzeżeniem, że nie może to pole być atakowane przez inną bierkę przeciwnika). 
+                                Król może również wykonać specyficzne posunięcie, zwane roszadą.
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <div id="dolny_pasek"></div>
+
+                </div>
+
+            </article>
+
+        </main>
+
+        <footer>
+
+            <div id="stopka">
+
+                <a href="https://www.youtube.com/channel/UCbdcpQ5uPPymv7Ea0nnFfOw" target="_blank"><div id="yt">Youtube</div></a>
+                <a href="https://www.facebook.com/magnuschess/" target="_blank"><div id="fb">Facebook</div></a>
+                <a href="https://twitter.com/MagnusCarlsen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><div id="tw">Twitter</div></a>
+
+            </div>
+
+           <div id="prawa"><p>Strona o Szachach &copy; Wszelkie prawa zastrzeżone!</p></div> 
+
+        </footer>
+
+
+    </body>
+
+
+
+</html>

@@ -1,0 +1,401 @@
+body{
+    margin: 0;
+    background-color: #7e7d7d; 
+    font-family: 'Lato', sans-serif;
+    user-select: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+#logo{
+    display: flex;
+    text-align: center;
+    font-size: 70px;
+    color: #ffffff;
+}
+#nagłówek{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #6dcefc; 
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+#krol{
+    width: 80px; 
+    height: 80px;
+}
+#darktheme{
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: 15px;
+}
+#darktheme1{
+    visibility:hidden;
+    width:80px;
+    height:80px;
+    margin-right: auto;
+    margin-left: 15px;
+}
+#pojemnik{
+    border-top: 4px solid white;
+    margin-top: 30px;
+}
+#secondarynav{
+    display: flex;
+    margin-left:auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#secondarynav >*{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+#secondarynav >*:hover{
+    color: #234899;
+    cursor: pointer;
+}
+#nawigacja {
+    background-color:#9ad411; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    position: relative;
+}
+#nawigacja > ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding:0;
+    list-style-type: none;
+    color: white;
+}
+ul{
+    padding:0;
+}
+ul > li{
+    width: 160px;
+    background-color: #88be0a; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    text-align: center;
+}
+ul > li:nth-child(6){
+	background-color: #249168 !important;
+}
+ul > li:nth-child(7){
+	background-color: #249168 !important;
+}
+ul > li:hover > a{
+    color: #98d907;
+    cursor: pointer;
+}
+ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+ul > #rozwijane{
+    width: 160px;
+    background-color: #88be0a; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+ul > #rozwijane:hover > ul{
+    color: #98d907;
+    display: block;
+}
+ul > #rozwijane > ul > li{
+    border-top: 1px solid black;
+    list-style-type: none;
+	color: white;
+}
+ul > #rozwijane > ul > li:nth-child(3){
+    border-bottom: 1px solid black;
+}
+ul > #rozwijane > ul{
+    position: absolute;
+    margin-top: 10px;
+    display: none;
+}
+ul > #rozwijane > ul > li:hover > a{
+    color: #98d907;
+}
+.sekcja{
+    padding-left: 75px;
+    padding-right: 75px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap: 50px;
+}
+.sekcjaR{
+    padding-left: 75px;
+    padding-right: 75px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap: 50px;
+}
+.tekst{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 700px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-align: justify;
+	justify-content:center;
+    margin-bottom: 80px;
+}
+.tekstspecjalny{
+    font-size: 30px;
+    text-align: center;
+}
+#gm{
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+.gm{
+    font-size: 26px;
+}
+.tabela, td, th{
+	text-align: center;
+	border: 2px solid white;
+	border-collapse: collapse;
+}
+.tabela{
+    margin-bottom: 80px;
+}
+th, td{
+	padding: 5px;
+}
+.obraz{
+    display: flex;
+    flex-direction: column;
+}
+.obraz > img{
+    width: 450px;
+    border: 4px solid black;
+}
+.obraz > svg{
+    width: 458px;
+}
+.divzkolami{
+    height: 50px; 
+    margin-top: 20px;
+}
+.obraz > svg > .czerwony:hover{
+    fill: #fd5b5b;
+    cursor: pointer;
+}
+.obraz > svg > .zielony:hover{
+    fill: #27da3f;
+    cursor: pointer;
+}
+#yt{
+    width: 250px;
+    text-align: center;
+    background-color: #d94348;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 30px;
+}
+#fb{
+    width: 250px;
+    text-align: center;
+    background-color: #4668b3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 30px;
+}
+#tw{
+    width: 250px;
+    text-align: center;
+    background-color: #3095d3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 30px;
+}
+#fb:hover{
+    color: #234899;
+    cursor: pointer;
+}
+#yt:hover{
+    color: #b82b2f;
+    cursor: pointer;
+}
+#tw:hover{
+    color: #2177ac;
+    cursor: pointer;
+}
+#stopka > a{
+    text-decoration: none;
+}
+#stopka{
+    background-color:#89bdbd; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 2px solid white; 
+    border-bottom: 2px solid white;
+}
+#dolny_pasek{
+    margin-top: 120px;
+}
+#prawa{
+    text-align:center;
+    color: white;
+    font-size: 18px;
+    margin-top: 50px;
+}
+#info{
+    font-size: 24px;
+}
+#infohover:hover{
+    cursor: pointer;
+    color: #234899;
+}
+.tile{
+    height: 40px;
+    width: 40px;
+}
+.tile:hover{
+    opacity: 1 !important;
+}
+a{
+    color: white;
+}
+#resetwynikow{
+    cursor: pointer;
+}
+.zdjecie > a > img{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    border: 2px solid white;
+}
+.zdjecie > a > img:hover{
+    border: 2px solid #234899;
+    cursor: pointer;
+}
+#galeria{
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#galeria2{
+    margin-top: 20px !important;
+	align-items: center !important;
+	text-align: center !important;
+    display: flex !important;
+	flex-direction: column !important;
+}
+
+@media (max-width: 1360px){
+    .tekst{
+        margin-bottom: 0px !important;
+    }
+}
+@media(max-width: 950px){
+    #darktheme1{
+        display: none;
+    }
+    #darktheme{
+        margin-left: 0px;
+        margin-right: 0px;
+        order: 0;
+    }
+    #nagłówek{
+        flex-direction: column;
+    }
+    #krol{
+        order: 1;
+    }
+    #logo{
+        order: 2;
+    }
+}
+@media (max-width: 600px){
+    .sekcja{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .sekcjaR{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .tabela{
+        margin-bottom: 0px;
+    }
+}
+@media (max-width:450px){
+    .obraz > *{
+        max-width: 300px;
+    }
+    .zdjecie > a > img{
+        width: 300px;
+        height: 300px;
+    }
+    .divzkolami{
+        margin-left: 10px;
+    }
+    .sekcja{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .sekcjaR{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+	.tekst{
+		letter-spacing: 0.3px;
+	}
+	.tabela{
+		font-size: 12px;
+	}
+    .tile{
+        width: 25px;
+        height: 25px;
+    }
+    .tiles{
+        height: 25px !important;
+    }
+}
+@media (max-width:315px){
+    .obraz > *{
+        max-width: 250px;
+    }
+    .zdjecie > a > img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
